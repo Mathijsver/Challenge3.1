@@ -1,0 +1,108 @@
+
+body, html {
+	font-family: helvetica;
+    margin: 0%;
+	color: #FFFFFF;
+	background-image: url('stars.jpeg')
+}
+
+.container {
+        display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.menu {
+  background-color: #333333;
+}
+
+.section {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo {
+    width: 150px;
+}
+
+#map {
+	margin: 0 auto;
+	height: 80vh;
+    width: 50%; 
+}
+
+
+#weather {
+	display: flex;
+    width: 50%;
+    flex-wrap: wrap;
+}
+
+#weather > .forecastMoment {
+    width: 10%;
+    overflow: hidden;
+	text-align: center;
+	background-color: #8087b3;
+    margin: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+	border-radius: 6px;
+	color: #444;
+	font-size: 0.8em;
+}
+
+.temp {
+	color: white;
+	font-size: 1.3em;
+}
+
+.hidden {
+	display: none;
+}
+
+/* Mobile */
+@media only screen and (max-width: 400px) {
+  body {
+  }
+    body, html {
+        background-image: none;
+        background-color: #333333;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    #map {
+        width: 100%;
+    }
+    #weather {
+        width: 100%; 
+        flex-direction: column;
+    }
+    #weather > .forecastMoment {
+        width: 100%;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  body,html { 
+        background-image: none;
+        background-color: #333333;
+  }
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    #map {
+        width: 100%;
+    }
+    #weather {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+}
