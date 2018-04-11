@@ -1,3 +1,8 @@
+ @font-face { 
+     font-family: 'TnS'; 
+     src: url('fonts/Time N Space.ttf');
+}
+
 
 body, html {
 	font-family: helvetica;
@@ -6,23 +11,41 @@ body, html {
 	background-image: url('stars.jpeg')
 }
 
-.container {
-        display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
 .menu {
   background-color: #333333;
+  height: 80px;
+}
+
+
+.title {
+    color: white;
+    font-family: 'TnS';
 }
 
 .section {
   width: 100%;
-  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.info {
+  background: linear-gradient(to bottom right, #18244a, #3e5589, #8087b3, #c8b1c3 );
+  max-height: 50px;
+  flex: 1 0 50%;
+}
+
+.container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+}
+
+.container :nth-child(1) { order: 1; }
+.container :nth-child(2) { order: 3; }
+.container :nth-child(3) { order: 2; }
+.container :nth-child(4) { order: 4; }
+
 
 #logo {
     width: 150px;
@@ -64,6 +87,8 @@ body, html {
 }
 
 
+
+
 /* Tablet */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
   body,html { 
@@ -74,6 +99,10 @@ body, html {
         display: flex;
         flex-direction: column;
     }
+    .container :nth-child(1) { order: 1; }
+    .container :nth-child(2) { order: 2; }
+    .container :nth-child(3) { order: 3; }
+    .container :nth-child(4) { order: 4; }
     #map {
         min-width: 100%;
     }
@@ -94,6 +123,10 @@ body, html {
         display: flex;
         flex-direction: column;
     }
+    .container :nth-child(1) { order: 1; }
+    .container :nth-child(2) { order: 2; }
+    .container :nth-child(3) { order: 3; }
+    .container :nth-child(4) { order: 4; }
     #map {
         min-width: 100%;
     }
